@@ -1,0 +1,171 @@
+// Generado a partir de img/especies/creditos.json (Wikimedia Commons)
+const CREDITOS = {
+ "muscipipra-vetula": {
+  "file": "muscipipra-vetula.jpg",
+  "autor": "Carlos Henrique Luz Nunes de Almeida",
+  "licencia": "CC BY 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Muscipipra_vetula_1.jpeg"
+ },
+ "euphonia-cyanocephala": {
+  "file": "euphonia-cyanocephala.jpg",
+  "autor": "Rick elis.simpson",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Golden-rumped_Euphonia_(2).jpg"
+ },
+ "pitangus-sulphuratus": {
+  "file": "pitangus-sulphuratus.jpg",
+  "autor": "Rhododendrites",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Great_kiskadee_(70240).jpg"
+ },
+ "turdus-amaurochalinus": {
+  "file": "turdus-amaurochalinus.jpg",
+  "autor": "Dario Sanches from SÃO PAULO, BRASIL",
+  "licencia": "CC BY-SA 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Turdus_amaurochalinus-2.jpg"
+ },
+ "pipraeidea-bonariensis": {
+  "file": "pipraeidea-bonariensis.jpg",
+  "autor": "Dario Sanches from São Paulo, Brasil",
+  "licencia": "CC BY-SA 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Thraupis_bonariensis.jpg"
+ },
+ "columbina-picui": {
+  "file": "columbina-picui.jpg",
+  "autor": "Polinova",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:PicuiGroundDove.jpg"
+ },
+ "knipolegus-striaticeps": {
+  "file": "knipolegus-striaticeps.jpg",
+  "autor": "Hector Bottai",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Knipolegus_striaceps_Cinereous_Tyrant_(male),_Chancan%C3%AD_natural_Reserve,_C%C3%B3rdoba,_Argentina.jpg"
+ },
+ "xolmis-coronatus": {
+  "file": "xolmis-coronatus.jpg",
+  "autor": "Hector Bottai",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Xolmis_coronatus_-_Black-crowned_Monjita;_San_Javier,_R%C3%ADo_Negro,_Uruguay.jpg"
+ },
+ "phytotoma-rutila": {
+  "file": "phytotoma-rutila.jpg",
+  "autor": "Allan Drewitt",
+  "licencia": "CC BY 2.5",
+  "fuente": "https://commons.wikimedia.org/wiki/File:White-tipped_Plantcutter_(Phytotoma_rutila).jpg"
+ },
+ "lophospingus-pusillus": {
+  "file": "lophospingus-pusillus.jpg",
+  "autor": "Gmmv1980",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Lophospingus_pusillus_en_el_Parque_Nacional_Teniente_Enciso_(cropped).jpg"
+ },
+ "microspingus-torquatus": {
+  "file": "microspingus-torquatus.jpg",
+  "autor": "Dominic Sherony",
+  "licencia": "CC BY-SA 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Ringed_Warbling-Finch_(Poospiza_torquata)_(cropped).jpg"
+ },
+ "coryphistera-alaudina": {
+  "file": "coryphistera-alaudina.jpg",
+  "autor": "(c) Jan Ebr & Ivana Ebrová, some rights reserved (CC BY)",
+  "licencia": "CC BY 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Lark-like_Brushrunner,_Ischil%C3%ADn_Department,_Cordoba,_Argentina_imported_from_iNaturalist_photo_114640866.jpg"
+ },
+ "furnarius-cristatus": {
+  "file": "furnarius-cristatus.jpg",
+  "autor": "Opisska",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Crested_Hornero.jpg"
+ },
+ "xolmis-salinarum": {
+  "file": "xolmis-salinarum.jpg",
+  "autor": "Andres Bianchi",
+  "licencia": "CC BY-SA 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Xolmis_salinarum_-_Salinas_monjita_(cropped).jpg"
+ },
+ "spiziapteryx-circumcincta": {
+  "file": "spiziapteryx-circumcincta.jpg",
+  "autor": "Hector Bottai",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Spiziapteryx_circumcincta_Spot-winged_Falconet,_Chancan%C3%AD_Natural_Reserve,_C%C3%B3rdoba,_Argentina_02_(cropped).jpg"
+ },
+ "neovison-vison": {
+  "file": "neovison-vison.jpg",
+  "autor": "Needsmoreritalin",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:MinkforWiki.jpg"
+ },
+ "podiceps-gallardoi": {
+  "file": "podiceps-gallardoi.jpg",
+  "autor": "Juan María Raggio (Vicepresident and Board of Directors of NGO AVES ARGENTINAS; BirdLife International in Argentina, located on Matheu 1246, Autonomous City of Buenos Aires).",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Mac%C3%A1_tobiano_sobre_vinagrilla_en_lago_de_la_patagonia_Argentina.jpg"
+ },
+ "rallus-antarcticus": {
+  "file": "rallus-antarcticus.jpg",
+  "autor": "Ezequielvera (ilustración)",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Gallineta_chica_(_Rallus_antarticus_).jpg"
+ },
+ "merganetta-armata": {
+  "file": "merganetta-armata.jpg",
+  "autor": "Alejandro  Bayer Tamayo from Armenia, Colombia",
+  "licencia": "CC BY-SA 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Merganetta_armata_(Pato_de_torrente)_(24726521941).jpg"
+ },
+ "anthus-antarcticus": {
+  "file": "anthus-antarcticus.jpg",
+  "autor": "Brian Gratwicke from DC, USA",
+  "licencia": "CC BY 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Anthus_antarcticus_-South_Georgia,_British_overseas_territory-8_2.jpg"
+ },
+ "thalassarche-melanophris": {
+  "file": "thalassarche-melanophris.jpg",
+  "autor": "JJ Harrison (https://www.jjharrison.com.au/)",
+  "licencia": "CC BY-SA 3.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Thalassarche_melanophrys_-_SE_Tasmania.jpg"
+ },
+ "tachycineta-leucorrhoa": {
+  "file": "tachycineta-leucorrhoa.jpg",
+  "autor": "Valentina Ferretti (Valeferretti at en.wikipedia)",
+  "licencia": "Public domain",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Tachycineta_leucorrhoa.jpg"
+ },
+ "elaenia-albiceps": {
+  "file": "elaenia-albiceps.jpg",
+  "autor": "JimSPeru",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:In_the_trail_to_Pogog_03,_Elaenia_albiceps.jpg"
+ },
+ "myiophobus-fasciatus": {
+  "file": "myiophobus-fasciatus.jpg",
+  "autor": "Félix Uribe from Rionegro, Antioquia, Colombia",
+  "licencia": "CC BY-SA 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Myiophobus_fasciatus_Atrapamoscas_pechirayado_Bran-coloured_Flycatcher_(15112531859).jpg"
+ },
+ "sturnus-vulgaris": {
+  "file": "sturnus-vulgaris.jpg",
+  "autor": "Charles J. Sharp",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Common_starling_(Sturnus_vulgaris)_breeding_male_Marken.jpg"
+ },
+ "furnarius-rufus": {
+  "file": "furnarius-rufus.jpg",
+  "autor": "Charles J. Sharp",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Rufous_hornero_(Furnarius_rufus)_Colonia_(cropped).jpg"
+ },
+ "colaptes-melanochloros": {
+  "file": "colaptes-melanochloros.jpg",
+  "autor": "Charles J. Sharp",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Green-barred_woodpecker_(Colaptes_melanochloros_melanochloros)_male_Colonia.jpg"
+ },
+ "rattus-norvegicus": {
+  "file": "rattus-norvegicus.jpg",
+  "autor": "Dunpharlain",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Brown_Rat_(Rattus_norvegicus).jpg"
+ }
+};

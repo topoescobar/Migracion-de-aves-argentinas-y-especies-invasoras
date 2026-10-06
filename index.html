@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rutas que cruzan el continente · Grupo 4</title>
+<meta name="description" content="Migraciones de aves en Argentina: desplazamientos longitudinales, la diagonal Chaco–Espinal–Cerrado y el impacto de las especies invasoras. Diversidad Animal II · Guía 6 · Grupo 4.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="barra-progreso"><span id="progreso"></span></div>
+
+<main id="diapositivas">
+
+  <!-- ===================== 1 · PORTADA ===================== -->
+  <section class="diapo portada" data-titulo="Portada">
+    <div class="portada-texto">
+      <p class="sobretitulo">Diversidad Animal II · Guía de estudio Nº 6</p>
+      <h1>Rutas que cruzan<br>el continente</h1>
+      <p class="bajada">Migraciones de aves en Argentina</p>
+      <ul class="temario">
+        <li><span class="chip lon">P7</span> Desplazamientos longitudinales</li>
+        <li><span class="chip chaco">P8</span> Chaco, Espinal y Cerrado</li>
+        <li><span class="chip invasora">Inv. 4</span> Especies invasoras</li>
+      </ul>
+      <p class="autores"><strong>Grupo 4</strong> · Garcia · Javier · Roa · Rubino · Valdez</p>
+    </div>
+    <div class="portada-mosaico" aria-hidden="true">
+      <img src="img/especies/pitangus-sulphuratus.jpg" alt="">
+      <img src="img/especies/pipraeidea-bonariensis.jpg" alt="">
+      <img src="img/especies/columbina-picui.jpg" alt="">
+      <img src="img/especies/podiceps-gallardoi.jpg" alt="">
+      <img src="img/especies/xolmis-coronatus.jpg" alt="">
+    </div>
+    <p class="ayuda-teclas">Usá <kbd>→</kbd> <kbd>←</kbd> para avanzar · <kbd>N</kbd> notas · <kbd>F</kbd> pantalla completa</p>
+    <aside class="notas">
+      <p>Presentamos las preguntas 7 y 8 del artículo de Capllonch (2018) y la pregunta de investigación 4 sobre especies invasoras.</p>
+      <p>En los mapas: los círculos con foto se pueden tocar para abrir la ficha de cada especie; el panel de la derecha recorre el mapa paso a paso.</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 2 · TRES FORMAS DE MOVERSE ===================== -->
+  <section class="diapo" data-titulo="Tipos de desplazamiento">
+    <header class="encabezado">
+      <span class="chip lon">Pregunta 7</span>
+      <h2>¿Cómo se explican los desplazamientos <em>longitudinales</em>?</h2>
+    </header>
+    <div class="tres-tipos">
+      <figure class="tipo">
+        <svg viewBox="0 0 200 160" aria-hidden="true">
+          <rect x="0" y="0" width="200" height="160" rx="14" class="fondo-tipo"/>
+          <text x="100" y="24" class="eje">N</text><text x="100" y="152" class="eje">S</text>
+          <path d="M100 128 C 112 100, 88 70, 100 40" class="flecha-tipo gris"/>
+          <path d="M92 46 L100 32 L108 46Z" class="punta gris"/>
+          <g class="copo" transform="translate(150 120)"><path d="M0-12V12M-10-6L10 6M-10 6L10-6"/></g>
+          <g class="sol" transform="translate(150 44)"><circle r="8"/><path d="M0-15V-11M0 11V15M-15 0H-11M11 0H15M-10-10L-8-8M8 8L10 10M-10 10L-8 8M8-8L10-10"/></g>
+        </svg>
+        <figcaption><strong>Latitudinal</strong><span>norte ↔ sur · escapan del frío</span></figcaption>
+      </figure>
+      <figure class="tipo">
+        <svg viewBox="0 0 200 160" aria-hidden="true">
+          <rect x="0" y="0" width="200" height="160" rx="14" class="fondo-tipo"/>
+          <path d="M10 140 L80 40 L104 70 L126 46 L190 140Z" class="montana"/>
+          <path d="M68 57 L80 40 L92 57 L84 54 L80 60 L75 54Z" class="nieve"/>
+          <path d="M84 70 C 70 95, 60 110, 40 128" class="flecha-tipo gris"/>
+          <path d="M36 118 L36 133 L50 128Z" class="punta gris"/>
+        </svg>
+        <figcaption><strong>Altitudinal</strong><span>montaña ↕ valle · bajan en invierno</span></figcaption>
+      </figure>
+      <figure class="tipo destacado">
+        <svg viewBox="0 0 200 160" aria-hidden="true">
+          <rect x="0" y="0" width="200" height="160" rx="14" class="fondo-tipo"/>
+          <text x="14" y="84" class="eje">O</text><text x="186" y="84" class="eje">E</text>
+          <g class="arboles">
+            <circle cx="42" cy="60" r="14"/><circle cx="34" cy="80" r="13"/><circle cx="50" cy="96" r="14"/><circle cx="58" cy="76" r="12"/>
+            <circle cx="150" cy="62" r="14"/><circle cx="160" cy="82" r="13"/><circle cx="144" cy="98" r="14"/><circle cx="136" cy="78" r="12"/>
+          </g>
+          <path d="M66 80 C 90 60, 110 100, 128 80" class="flecha-tipo verde"/>
+          <path d="M122 72 L134 76 L126 88Z" class="punta verde"/>
+          <text x="100" y="140" class="leyenda-svg">ruta selvática</text>
+        </svg>
+        <figcaption><strong>Longitudinal</strong><span>oeste ↔ este · siguen a la selva</span></figcaption>
+      </figure>
+    </div>
+    <p class="disparador">En el trópico <strong>el continente se ensancha</strong> → selvas continuas de oeste a este.</p>
+    <aside class="notas">
+      <p>A diferencia de las migraciones clásicas norte–sur (para escapar del frío) o altitudinales (para bajar de la montaña), los desplazamientos longitudinales ocurren dentro de la franja tropical/subtropical, donde el continente sudamericano se ensancha.</p>
+      <p>Esa mayor anchura genera una continuidad de selvas en sentido este–oeste —entre los bosques andino-amazónicos y la Selva Atlántica/Paranaense— y por esa "ruta selvática" las aves se desplazan siguiendo la disponibilidad de hábitat boscoso más que huyendo del frío.</p>
+      <p>Término acuñado por Areta y Bodrati (2008, 2010), retomado por Capllonch (2018).</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 3 · MAPA LONGITUDINAL ===================== -->
+  <section class="diapo diapo-mapa" data-titulo="Mapa: longitudinales" data-mapa="longitudinal">
+    <div class="mapa" id="mapa-longitudinal" role="region" aria-label="Mapa de desplazamientos longitudinales"></div>
+    <div class="panel">
+      <span class="chip lon">Pregunta 7</span>
+      <h2>La ruta selvática</h2>
+      <div class="cifra lon"><span class="numero" data-contar="43">43</span><span class="unidad">especies y subespecies<br>con desplazamientos longitudinales</span></div>
+      <nav class="pasos" aria-label="Recorrido del mapa"></nav>
+    </div>
+    <aside class="notas">
+      <p>Unas 43 especies y subespecies (Tabla 6); la mayoría de la Selva Paranaense, pero también especies de hábitats más abiertos como Benteveo, fío-fío silbón y zorzal chalchalero.</p>
+      <p>Recuperaciones de anillado: un <em>Pitangus sulphuratus</em> anillado en el Bañado de Figueroa (Santiago del Estero) fue recapturado seis años después en Santa Catarina, Brasil (Olrog 1962); una <em>Pipraeidea bonariensis</em> anillada en San Miguel de Tucumán fue hallada en Rio Grande do Sul cinco años después (Rumboll et al. 2005).</p>
+      <p><em>Myiophobus fasciatus flammiceps</em>: Selva Atlántica del NE argentino y E de Brasil; residente todo el año en el interior de San Pablo, invernante en la costa atlántica del NE de Brasil → una misma ruta combina poblaciones residentes y migratorias.</p>
+      <p>Las áreas de selva y el corredor están dibujados de forma esquemática. En los anillados se marca el estado de Brasil donde se recuperó el ave, no el punto exacto.</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 4 · GALERÍA P7 ===================== -->
+  <section class="diapo" data-titulo="Especies P7">
+    <header class="encabezado">
+      <span class="chip lon">Pregunta 7</span>
+      <h2>¿Quiénes viajan de oeste a este?</h2>
+    </header>
+    <div class="galeria" data-especies="muscipipra-vetula,euphonia-cyanocephala,pitangus-sulphuratus,pipraeidea-bonariensis,myiophobus-flammiceps,elaenia-albiceps,turdus-amaurochalinus"></div>
+    <p class="disparador">Tocá cada ave para ver su ficha.</p>
+    <aside class="notas">
+      <p>Especies emblemáticas: <em>Muscipipra vetula</em> y <em>Euphonia cyanocephala</em> (los ejemplos originales de Areta y Bodrati).</p>
+      <p>De ambientes abiertos: <em>Pitangus sulphuratus</em>, <em>Elaenia albiceps</em>, <em>Turdus amaurochalinus</em>. Con evidencia de anillado: Benteveo y naranjero.</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 5 · MAPA CHACO ===================== -->
+  <section class="diapo diapo-mapa" data-titulo="Mapa: diagonal árida" data-mapa="chaco">
+    <div class="mapa" id="mapa-chaco" role="region" aria-label="Mapa de desplazamientos en el Chaco, Espinal y Cerrado"></div>
+    <div class="panel">
+      <span class="chip chaco">Pregunta 8</span>
+      <h2>La diagonal árida</h2>
+      <div class="cifra chaco"><span class="numero" data-contar="66">66</span><span class="unidad">especies y subespecies<br>se mueven dentro de ella</span></div>
+      <nav class="pasos" aria-label="Recorrido del mapa"></nav>
+    </div>
+    <aside class="notas">
+      <p>El Chaco y el Cerrado forman, junto con la Caatinga del NE de Brasil, una gran "diagonal árida", relacionada con los pulsos de inundación de los grandes ríos (Pilcomayo, Bermejo) y conectada con el Pantanal, sitio de invernada para millones de aves.</p>
+      <p>Unas 66 especies y subespecies (Tabla 9) circunscriben sus desplazamientos a esta región, sin llegar a las grandes distancias de otros patrones (templado-tropical o neártico).</p>
+      <p>Torcacita común: bandadas en otoño en el norte argentino, invernada en el Chaco boliviano y la Chiquitanía. Viudita chaqueña: al norte, a Bolivia y Paraguay. Monjita coronada: cruza el Chaco Occidental en grandes grupos hacia Bolivia, Paraguay y Brasil.</p>
+      <p>Biomas y ríos dibujados de forma esquemática.</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 6 · MIGRACIÓN PARCIAL ===================== -->
+  <section class="diapo" data-titulo="Migración parcial">
+    <header class="encabezado">
+      <span class="chip chaco">Pregunta 8</span>
+      <h2>¿Qué caracteriza a estos desplazamientos?</h2>
+    </header>
+    <div class="parcial-grid">
+      <figure class="esquema-parcial">
+        <svg viewBox="0 0 520 380" role="img" aria-label="Esquema de migración parcial: las poblaciones del sur viajan más lejos, las tropicales son residentes y en el medio se mezclan">
+          <defs>
+            <linearGradient id="grad-lat" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="var(--calido)"/>
+              <stop offset="1" stop-color="var(--frio)"/>
+            </linearGradient>
+          </defs>
+          <rect x="40" y="20" width="58" height="340" rx="29" fill="url(#grad-lat)"/>
+          <text x="69" y="50" class="lat">Trópico</text>
+          <text x="69" y="345" class="lat claro">Sur</text>
+          <rect x="120" y="120" width="380" height="88" rx="12" class="zona-mezcla"/>
+          <text x="490" y="140" class="nota-svg" text-anchor="end">zona de mezcla</text>
+          <!-- población sur: viaje largo -->
+          <circle cx="170" cy="320" r="13" class="pob sur"/>
+          <path d="M170 304 C 170 230, 175 140, 178 58" class="mov largo"/>
+          <path d="M170 64 L178 46 L187 64Z" class="punta-mov"/>
+          <text x="196" y="324" class="rotulo">Poblaciones australes → <tspan font-weight="700">viaje largo</tspan></text>
+          <!-- población media: viaje corto -->
+          <circle cx="300" cy="240" r="13" class="pob media"/>
+          <path d="M300 224 C 300 200, 302 175, 304 150" class="mov corto"/>
+          <path d="M296 156 L304 138 L312 156Z" class="punta-mov"/>
+          <text x="322" y="252" class="rotulo">→ desplazamiento corto</text>
+          <!-- población tropical: residente -->
+          <circle cx="420" cy="62" r="13" class="pob trop"/>
+          <circle cx="420" cy="62" r="24" class="residente-anillo"/>
+          <text x="420" y="108" class="rotulo" text-anchor="middle">residentes</text>
+        </svg>
+        <figcaption>Ej.: <em>Myiophobus fasciatus auriceps</em> en el Gran Chaco y el Cerrado</figcaption>
+      </figure>
+      <ul class="rasgos">
+        <li><span class="icono">⤡</span><div><strong>Regionales</strong><span>sin grandes distancias intercontinentales</span></div></li>
+        <li><span class="icono">⁂</span><div><strong>Gregarios</strong><span>en grandes bandadas</span></div></li>
+        <li><span class="icono">◐</span><div><strong>Parciales</strong><span>cuanto más al sur, más lejos viajan</span></div></li>
+        <li><span class="icono">≈</span><div><strong>Ligados al agua</strong><span>pulsos de inundación y Pantanal</span></div></li>
+      </ul>
+    </div>
+    <aside class="notas">
+      <p>Suelen ser movimientos gregarios, en grandes bandadas, y muchas veces parciales: las poblaciones más australes (más expuestas al frío) hacen desplazamientos más largos, mientras que las poblaciones cercanas al trópico son residentes o hacen movimientos cortos, y ambas pueden mezclarse en zonas intermedias.</p>
+      <p>Ejemplo clásico: <em>Myiophobus fasciatus auriceps</em> (Hayes et al. 1994; Chesser 1997).</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 7 · GALERÍA P8 ===================== -->
+  <section class="diapo" data-titulo="Especies P8">
+    <header class="encabezado">
+      <span class="chip chaco">Pregunta 8</span>
+      <h2>Aves de la diagonal árida</h2>
+    </header>
+    <div class="galeria compacta" data-especies="columbina-picui,myiophobus-auriceps,knipolegus-striaticeps,xolmis-coronatus,phytotoma-rutila,lophospingus-pusillus,microspingus-torquatus,coryphistera-alaudina,furnarius-cristatus,xolmis-salinarum,spiziapteryx-circumcincta"></div>
+    <p class="disparador">Especies adaptadas a ambientes <strong>xerófilos</strong>.</p>
+    <aside class="notas">
+      <p>Además de las cuatro migrantes "clásicas" (torcacita, mosqueta, viudita chaqueña, monjita coronada), el grupo incluye cortarramas, soldadito común, monterita de collar, añumbí/crestudo, hornero copetón, monjita salinera y halcóncito gris.</p>
+      <p>Nota: monjita coronada y monjita salinera hoy se ubican en el género <em>Neoxolmis</em>; usamos los nombres del artículo.</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 8 · INVASORAS: DOS VÍAS ===================== -->
+  <section class="diapo" data-titulo="Invasoras">
+    <header class="encabezado">
+      <span class="chip invasora">Investigación 4</span>
+      <h2>¿Cómo afectan las especies invasoras a la migración?</h2>
+    </header>
+    <div class="dos-vias">
+      <button class="via" data-ficha="neovison-vison">
+        <img src="img/especies/neovison-vison.jpg" alt="Visón americano">
+        <div><span class="via-tipo">Vía 1</span><strong>Depredación</strong><span>en sitios de cría o descanso</span><em>visón americano · ratas</em></div>
+      </button>
+      <button class="via" data-ficha="sturnus-vulgaris">
+        <img src="img/especies/sturnus-vulgaris.jpg" alt="Estornino pinto">
+        <div><span class="via-tipo">Vía 2</span><strong>Competencia</strong><span>por cavidades de nido y alimento</span><em>estornino pinto</em></div>
+      </button>
+    </div>
+    <aside class="notas">
+      <p>Las especies invasoras afectan a las aves migratorias principalmente por dos vías: depredación directa (sobre todo en sitios de nidificación o descanso) y competencia por recursos críticos (cavidades de nido, alimento).</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 9 · MAPA INVASORAS ===================== -->
+  <section class="diapo diapo-mapa" data-titulo="Mapa: invasoras" data-mapa="invasoras">
+    <div class="mapa" id="mapa-invasoras" role="region" aria-label="Mapa de casos de especies invasoras"></div>
+    <div class="panel">
+      <span class="chip invasora">Investigación 4</span>
+      <h2>Tres casos</h2>
+      <div class="cifra invasora"><span class="numero">33</span><span class="unidad">macáes tobianos adultos<br>muertos por un visón en una noche (2011)</span></div>
+      <nav class="pasos" aria-label="Recorrido del mapa"></nav>
+    </div>
+    <aside class="notas">
+      <p><strong>Visón americano</strong> (introducido para peletería a mediados del s. XX): ataca aves acuáticas. Macá tobiano (endémico de la meseta de Santa Cruz, ~750 individuos): en 2011 un solo visón mató 33 adultos en una noche, además de nidos, huevos y pichones. También gallineta chica (área contraída 80%), cisne de cuello negro, cauquenes y pato de torrente (migrante del oeste montañoso y altitudinal, Tablas 2 y 4).</p>
+      <p><strong>Estornino pinto</strong> (Buenos Aires, 1987): en Pereyra Iraola usurpa nidos ocupados y cavidades recién hechas por carpinteros; afecta a hornero, <em>Colaptes melanochloros</em> y <em>C. campestris</em>. Falta evaluar el efecto sobre golondrinas cavícolas migratorias (<em>Tachycineta</em>, <em>Progne</em>).</p>
+      <p><strong>Ratas en islas</strong>: ruta atlántica patagónica (Tabla 7: albatros, petreles, pingüinos). En Georgias del Sur depredaban huevos y pichones de petreles cavadores y del bisbita; declarada libre de ratas en 2018 tras el mayor programa de erradicación hasta ese momento.</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 10 · CONCLUSIÓN ===================== -->
+  <section class="diapo" data-titulo="Conclusión">
+    <header class="encabezado">
+      <span class="chip invasora">Investigación 4</span>
+      <h2>No frenan la migración: <em>la debilitan en los extremos</em></h2>
+    </header>
+    <figure class="esquema-ruta">
+      <svg viewBox="0 0 900 300" role="img" aria-label="Ruta migratoria con sitio de cría, sitio de descanso e invernada; las invasoras atacan en los extremos">
+        <path d="M110 170 C 300 70, 600 270, 790 170" class="ruta-esquema"/>
+        <path d="M772 156 L800 168 L776 186Z" class="punta-esquema"/>
+        <g class="nodo" transform="translate(110 170)"><circle r="44"/><text y="-60">Cría / colonia</text></g>
+        <g class="nodo chico" transform="translate(450 170)"><circle r="30"/><text y="-44">Descanso</text></g>
+        <g class="nodo" transform="translate(790 170)"><circle r="44"/><text y="-60">Invernada</text></g>
+        <g class="ataque" transform="translate(110 262)"><rect x="-96" y="-18" width="192" height="36" rx="18"/><text y="6">visón · ratas · estornino</text></g>
+        <g class="ataque" transform="translate(790 262)"><rect x="-96" y="-18" width="192" height="36" rx="18"/><text y="6">depredadores</text></g>
+        <path d="M110 244 L110 220" class="impacto"/><path d="M790 244 L790 220" class="impacto"/>
+      </svg>
+    </figure>
+    <div class="cadena">
+      <span>↓ éxito reproductivo</span><span class="sep">+</span><span>↓ supervivencia</span><span class="sep">=</span><strong>caída poblacional</strong>
+    </div>
+    <aside class="notas">
+      <p>En conjunto, estos tres casos muestran que las especies invasoras no detienen la migración en sí, pero sí reducen el éxito reproductivo y la supervivencia en los extremos de la ruta (colonias de cría, sitios de descanso o invernada), lo que puede traducirse en una caída poblacional de la especie migratoria afectada.</p>
+      <p>El caso de Georgias del Sur lo confirma "al revés": al sacar a las ratas, las aves se recuperaron rápido.</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 11 · BIBLIOGRAFÍA ===================== -->
+  <section class="diapo bibliografia" data-titulo="Bibliografía">
+    <header class="encabezado"><h2>Bibliografía</h2></header>
+    <div class="biblio-grid">
+      <ul class="refs">
+        <li>Capllonch P (2018) Un panorama de las migraciones de aves en Argentina. <em>El Hornero</em> 33(1): 1–18. doi:10.56178/eh.v33i1.490</li>
+        <li>Areta JI y Bodrati A (2008, 2010), citados en Capllonch (2018).</li>
+        <li>Di Giacomo AS, De Francesco MV y Coconier EG (eds.) (2007) <em>Áreas Importantes para la Conservación de las Aves en Argentina</em>. Aves Argentinas/AOP.</li>
+        <li>MAyDS y Aves Argentinas (2015) <em>Categorización de las Aves de la Argentina según su estado de conservación</em>.</li>
+        <li>de la Peña MR (2025) <em>Aves Argentinas: Descripción, Comportamiento, Reproducción y Distribución</em>.</li>
+        <li>Narosky T y Yzurieta D (1987) <em>Guía para la Identificación de las Aves de Argentina y Uruguay</em>. AOP.</li>
+      </ul>
+      <details class="creditos">
+        <summary>Créditos de fotos y mapas</summary>
+        <p>Mapas: relieve, límites y nombres © Esri (fuente: US National Park Service). Biomas y rutas dibujados en forma esquemática por el grupo. Fotos: Wikimedia Commons.</p>
+        <ul id="lista-creditos"></ul>
+      </details>
+    </div>
+    <p class="gracias">¡Gracias!</p>
+  </section>
+
+</main>
+
+<!-- Controles -->
+<nav class="controles" aria-label="Navegación de diapositivas">
+  <button id="btn-anterior" aria-label="Anterior">←</button>
+  <span id="contador">1 / 11</span>
+  <button id="btn-siguiente" aria-label="Siguiente">→</button>
+  <button id="btn-notas" aria-label="Mostrar notas" title="Notas (N)">✎</button>
+  <button id="btn-pantalla" aria-label="Pantalla completa" title="Pantalla completa (F)">⛶</button>
+</nav>
+
+<!-- Panel de notas del orador -->
+<aside id="panel-notas" hidden>
+  <div class="notas-cabecera"><strong>Notas</strong><button id="cerrar-notas" aria-label="Cerrar notas">×</button></div>
+  <div id="notas-contenido"></div>
+</aside>
+
+<!-- Ficha de especie -->
+<dialog id="ficha">
+  <button class="cerrar" aria-label="Cerrar ficha">×</button>
+  <figure>
+    <img id="ficha-foto" alt="">
+    <figcaption id="ficha-credito"></figcaption>
+  </figure>
+  <div class="ficha-cuerpo">
+    <span id="ficha-etiqueta" class="etiqueta"></span>
+    <h3 id="ficha-comun"></h3>
+    <p id="ficha-cientifico" class="cientifico"></p>
+    <p id="ficha-descripcion"></p>
+    <p id="ficha-dato" class="dato"></p>
+  </div>
+</dialog>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/creditos.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/mapas.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

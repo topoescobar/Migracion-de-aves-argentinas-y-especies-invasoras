@@ -431,6 +431,17 @@ dialog#ficha.grupo-afectada { --c: var(--afectada); }
   position: absolute; top: 10px; right: 10px; z-index: 2; width: 2.2rem; height: 2.2rem; border-radius: 50%;
   border: 0; background: rgba(255,255,255,.92); font-size: 1.4rem; line-height: 1; box-shadow: 0 2px 8px rgba(0,0,0,.25);
 }
+.cantos { display: flex; flex-direction: column; gap: .35rem; }
+.cantos[hidden] { display: none; }
+.canto { display: flex; align-items: center; gap: .55rem; font-size: .85rem; }
+.canto-btn {
+  flex: none; width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid var(--c);
+  background: transparent; color: var(--c); font-size: .75rem; line-height: 1; cursor: pointer;
+}
+.canto-btn.activo { background: var(--c); color: #fff; }
+.canto-tipo { font-weight: 700; text-transform: capitalize; min-width: 4.2em; }
+.canto-fuente { color: var(--tinta-suave); font-size: .9em; }
+.canto-fuente a { color: inherit; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {

@@ -28,8 +28,54 @@ function abrirFicha(id) {
   document.getElementById("ficha-dato").textContent = sp.dato;
   ficha.className = "grupo-" + sp.grupo;
   ficha.showModal();
+  mostrarCantos(id);
 }
 ficha.querySelector(".cerrar").addEventListener("click", () => ficha.close());
+
+/* ---------- Cantos (xeno-canto, en línea): suena el primero al abrir ---------- */
+const canto = new Audio();
+const fichaCantos = document.getElementById("ficha-cantos");
+let botonActivo = null;
+
+function mostrarCantos(id) {
+  const lista = CANTOS[id] || [];
+  fichaCantos.innerHTML = "";
+  fichaCantos.hidden = !lista.length;
+  botonActivo = null;
+  lista.forEach((c, i) => {
+    const fila = document.createElement("div");
+    fila.className = "canto";
+    fila.innerHTML = `<button class="canto-btn" aria-label="Reproducir ${c.tipo}">▶</button>
+      <span class="canto-tipo">${c.tipo}</span>
+      <span class="canto-fuente"><a href="https://xeno-canto.org/${c.xc}" target="_blank" rel="noopener">XC${c.xc} ↗</a>
+        · ${c.autor} · <a href="${c.licenciaUrl}" target="_blank" rel="noopener">${c.licencia}</a></span>`;
+    const btn = fila.querySelector("button");
+    btn.addEventListener("click", () => alternarCanto(btn, c.audio));
+    fichaCantos.appendChild(fila);
+    if (i === 0) alternarCanto(btn, c.audio);
+  });
+}
+
+function alternarCanto(btn, audio) {
+  if (btn === botonActivo) { canto.paused ? canto.play().catch(() => {}) : canto.pause(); return; }
+  if (botonActivo) botonActivo.classList.remove("activo");
+  botonActivo = btn;
+  btn.classList.add("activo");
+  canto.src = audio;
+  canto.play().catch(() => {});
+}
+
+function iconoCanto() {
+  fichaCantos.querySelectorAll(".canto-btn").forEach(b => {
+    const sonando = b === botonActivo && !canto.paused;
+    b.textContent = sonando ? "❚❚" : "▶";
+    b.ariaLabel = (sonando ? "Pausar " : "Reproducir ") + b.nextElementSibling.textContent;
+  });
+}
+canto.addEventListener("play", iconoCanto);
+canto.addEventListener("pause", iconoCanto);
+canto.addEventListener("ended", () => { canto.currentTime = 0; iconoCanto(); });
+ficha.addEventListener("close", () => { canto.pause(); canto.removeAttribute("src"); botonActivo = null; });
 ficha.addEventListener("click", e => { if (e.target === ficha) ficha.close(); }); // clic fuera
 
 document.querySelectorAll("[data-ficha]").forEach(b =>
@@ -59,6 +105,12 @@ Object.entries(usadas).forEach(([archivo, nombre]) => {
   li.innerHTML = `<em>${nombre}</em>: ${c.autor} · <a href="${c.fuente}" target="_blank" rel="noopener">${c.licencia}</a>`;
   listaCreditos.appendChild(li);
 });
+const listaCantos = document.getElementById("lista-cantos");
+Object.entries(CANTOS).forEach(([id, cantos]) => cantos.forEach(c => {
+  const li = document.createElement("li");
+  li.innerHTML = `<em>${ESPECIES[id].cientifico}</em> (${c.tipo}): ${c.autor} · <a href="https://xeno-canto.org/${c.xc}" target="_blank" rel="noopener">XC${c.xc}</a> · <a href="${c.licenciaUrl}" target="_blank" rel="noopener">${c.licencia}</a>`;
+  listaCantos.appendChild(li);
+}));
 
 /* ---------- Navegación ---------- */
 function mostrar(i, { desdeHash = false } = {}) {

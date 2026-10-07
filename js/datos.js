@@ -191,6 +191,33 @@ const ESPECIES = {
     etiqueta: "Ruta atlántica patagónica",
     descripcion: "El albatros más abundante del mundo. Cría en colonias en islas (Malvinas, Georgias del Sur) y se alimenta sobre la plataforma continental patagónica.",
     dato: "Forma parte de los desplazamientos atlánticos patagónicos (Tabla 7) junto con petreles y pingüinos."
+  },
+
+  /* ---------- Caso especial: planta invasora (ligustrina) ---------- */
+  "ligustrum-lucidum": {
+    comun: "Ligustrina / siempreverde", cientifico: "Ligustrum lucidum", grupo: "invasora",
+    etiqueta: "Planta invasora · alimento",
+    descripcion: "Árbol perenne originario de China, plantado como ornamental y para cercos. Crece rápido, forma bosques densos sin sotobosque y desplaza al bosque nativo (Yungas, Chaco Serrano, talares).",
+    dato: "Produce enormes cantidades de frutos carnosos en otoño e invierno, justo cuando el bosque nativo casi no da frutos."
+  },
+  "turdus-amaurochalinus-lig": {
+    foto: "turdus-amaurochalinus",
+    comun: "Zorzal chalchalero", cientifico: "Turdus amaurochalinus", grupo: "afectada",
+    etiqueta: "Migratorio · ¿se queda en invierno?",
+    descripcion: "Zorzal pardo de pico amarillo, migratorio: muchas poblaciones se van al norte en otoño. Es frugívoro y muy común en parques y ciudades.",
+    dato: "Con ligustrinas cargadas de frutos en invierno, se propone que más individuos se queden como residentes en áreas urbanas y periurbanas."
+  },
+  "turdus-nigriceps": {
+    comun: "Zorzal plomizo / cabeza negra", cientifico: "Turdus nigriceps", grupo: "afectada",
+    etiqueta: "Migrante de las Yungas",
+    descripcion: "Zorzal gris pizarra de cabeza oscura y pico amarillo. Cría en primavera-verano en las selvas de montaña (Yungas) del NO argentino y sur de Bolivia, y en otoño migra hacia el norte.",
+    dato: "Las Yungas son uno de los ambientes más invadidos por la ligustrina: su oferta de frutos invernales podría alterar el ciclo de este migrante."
+  },
+  "turdus-rufiventris": {
+    comun: "Zorzal colorado", cientifico: "Turdus rufiventris", grupo: "afectada",
+    etiqueta: "Residente · dispersor",
+    descripcion: "Zorzal de vientre rojizo y canto melodioso, residente todo el año. Es el ave más abundante de muchas reservas urbanas de Buenos Aires.",
+    dato: "En la reserva Ribera Norte (San Isidro), sus heces contenían sobre todo semillas de ligustrina, que siguen siendo viables después de pasar por su tracto digestivo."
   }
 };
 

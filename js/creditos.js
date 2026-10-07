@@ -167,5 +167,23 @@ const CREDITOS = {
   "autor": "Dunpharlain",
   "licencia": "CC BY-SA 4.0",
   "fuente": "https://commons.wikimedia.org/wiki/File:Brown_Rat_(Rattus_norvegicus).jpg"
+ },
+ "ligustrum-lucidum": {
+  "file": "ligustrum-lucidum.jpg",
+  "autor": "Ettore Balocchi",
+  "licencia": "CC BY 2.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Oleaceae_-_Ligustrum_lucidum_(8304697144).jpg"
+ },
+ "turdus-rufiventris": {
+  "file": "turdus-rufiventris.jpg",
+  "autor": "Charles J. Sharp",
+  "licencia": "CC BY-SA 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Rufous-bellied_thrush_(Turdus_rufiventris).JPG"
+ },
+ "turdus-nigriceps": {
+  "file": "turdus-nigriceps.jpg",
+  "autor": "Facundo Chieffo (iNaturalist)",
+  "licencia": "CC BY 4.0",
+  "fuente": "https://commons.wikimedia.org/wiki/File:Andean_Slaty_Thrush_iNaturalist.jpg"
  }
 };

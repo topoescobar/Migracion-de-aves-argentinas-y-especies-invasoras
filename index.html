@@ -213,7 +213,7 @@
       <span class="chip invasora">Investigación 4</span>
       <h2>¿Cómo afectan las especies invasoras a la migración?</h2>
     </header>
-    <div class="dos-vias">
+    <div class="dos-vias tres">
       <button class="via" data-ficha="neovison-vison">
         <img src="img/especies/neovison-vison.jpg" alt="Visón americano">
         <div><span class="via-tipo">Vía 1</span><strong>Depredación</strong><span>en sitios de cría o descanso</span><em>visón americano · ratas</em></div>
@@ -222,9 +222,14 @@
         <img src="img/especies/sturnus-vulgaris.jpg" alt="Estornino pinto">
         <div><span class="via-tipo">Vía 2</span><strong>Competencia</strong><span>por cavidades de nido y alimento</span><em>estornino pinto</em></div>
       </button>
+      <button class="via" data-ficha="ligustrum-lucidum">
+        <img src="img/especies/ligustrum-lucidum.jpg" alt="Frutos de ligustrina">
+        <div><span class="via-tipo">Caso especial</span><strong>Alimento</strong><span>una planta que cambia el calendario</span><em>ligustrina · zorzales</em></div>
+      </button>
     </div>
     <aside class="notas">
       <p>Las especies invasoras afectan a las aves migratorias principalmente por dos vías: depredación directa (sobre todo en sitios de nidificación o descanso) y competencia por recursos críticos (cavidades de nido, alimento).</p>
+      <p>Caso especial: una planta invasora, la ligustrina, no ataca a las aves sino que les ofrece comida en invierno, y eso puede modificar la migración misma de los zorzales.</p>
     </aside>
   </section>
 
@@ -244,7 +249,54 @@
     </aside>
   </section>
 
-  <!-- ===================== 10 · CONCLUSIÓN ===================== -->
+  <!-- ===================== 10 · CASO ESPECIAL: LIGUSTRINA ===================== -->
+  <section class="diapo" data-titulo="Ligustrina y zorzales">
+    <header class="encabezado">
+      <span class="chip invasora">Investigación 4 · Caso especial</span>
+      <h2>Ligustrina: una <em>trampa ecológica</em> para los zorzales</h2>
+    </header>
+    <div class="ligustrina-grid">
+      <figure class="ciclo">
+        <svg viewBox="0 0 560 430" role="img" aria-label="Ciclo: la ligustrina fructifica en invierno, los zorzales comen sus frutos, podrían dejar de migrar y dispersan sus semillas, lo que expande la ligustrina y reduce el bosque nativo">
+          <circle cx="280" cy="215" r="150" class="ciclo-aro"/>
+          <path d="M-11-10 L11 0 L-11 10Z" class="ciclo-punta" transform="translate(410 140) rotate(60)"/>
+          <path d="M-11-10 L11 0 L-11 10Z" class="ciclo-punta" transform="translate(410 290) rotate(120)"/>
+          <path d="M-11-10 L11 0 L-11 10Z" class="ciclo-punta" transform="translate(150 290) rotate(240)"/>
+          <path d="M-11-10 L11 0 L-11 10Z" class="ciclo-punta" transform="translate(150 140) rotate(300)"/>
+          <text x="280" y="208" class="ciclo-centro">trampa</text>
+          <text x="280" y="234" class="ciclo-centro">ecológica</text>
+          <g class="ciclo-nodo inv" transform="translate(280 65)">
+            <rect x="-130" y="-38" width="260" height="76" rx="16"/>
+            <text y="-8">Fructifica en</text><text y="18">otoño e invierno</text>
+          </g>
+          <g class="ciclo-nodo" transform="translate(452 215)">
+            <rect x="-100" y="-38" width="200" height="76" rx="16"/>
+            <text y="-8">Los zorzales</text><text y="18">comen sus frutos</text>
+          </g>
+          <g class="ciclo-nodo hipotesis" transform="translate(280 365)">
+            <rect x="-130" y="-38" width="260" height="76" rx="16"/>
+            <text y="-8">Hay comida en invierno:</text><text y="18">¿dejan de migrar?</text>
+          </g>
+          <g class="ciclo-nodo inv" transform="translate(108 215)">
+            <rect x="-100" y="-46" width="200" height="92" rx="16"/>
+            <text y="-16">Dispersan semillas</text><text y="8">→ más ligustrina,</text><text y="32">menos bosque nativo</text>
+          </g>
+        </svg>
+      </figure>
+      <div class="galeria cuatro" data-especies="ligustrum-lucidum,turdus-amaurochalinus-lig,turdus-nigriceps,turdus-rufiventris"></div>
+    </div>
+    <p class="disparador">Beneficio inmediato (comida sin viajar) · costo a largo plazo (pierden el bosque nativo).</p>
+    <aside class="notas">
+      <p><strong>La ligustrina</strong> (<em>Ligustrum lucidum</em>) es un árbol originario de China y una de las plantas exóticas más invasoras del centro y norte de Argentina. Crece rápido, forma bosques densos casi sin sotobosque y desplaza al bosque nativo (en las Sierras Chicas de Córdoba ya ocupa unas 3.400 ha; Hoyos et al. 2010). Produce millones de frutos carnosos en otoño e invierno, justo cuando el bosque nativo casi no da frutos.</p>
+      <p><strong>Zorzal chalchalero</strong> (<em>T. amaurochalinus</em>): migratorio. Con ligustrinas cargadas de frutos en áreas urbanas y periurbanas, se propone que más individuos se queden durante el invierno como residentes.</p>
+      <p><strong>Zorzal plomizo</strong> (<em>T. nigriceps</em>): cría en primavera-verano en las Yungas del NO argentino y sur de Bolivia; en otoño migra al norte (Bolivia, Perú, oeste de Brasil) siguiendo la fructificación de árboles nativos. Las Yungas están muy invadidas por ligustrina, cuya oferta invernal podría romper ese ciclo.</p>
+      <p><strong>Zorzal colorado</strong> (<em>T. rufiventris</em>): residente. En la reserva Ribera Norte (San Isidro), la FAUBA encontró que sus heces contenían sobre todo semillas de ligustrina, que siguen siendo viables: el ave la dispersa y expande el bosque invasor (Devoto y Kamlofsky, 2025).</p>
+      <p><strong>Trampa ecológica</strong>: el ave obtiene un beneficio inmediato (comida sin el costo de volar miles de km), pero al dispersar la ligustrina contribuye a reemplazar el bosque nativo del que depende el resto de su ciclo. En el Chaco Serrano, los bosques de ligustrina tienen hasta 37% menos especies de aves, aunque favorecen a sus dispersores (Bellis et al. 2021).</p>
+      <p>Ojo: el cambio en la migración de los zorzales es una hipótesis razonable, no algo medido con anillado o seguimiento. Lo documentado es el consumo invernal de frutos, la dispersión de semillas y el reemplazo del bosque nativo.</p>
+    </aside>
+  </section>
+
+  <!-- ===================== 11 · CONCLUSIÓN ===================== -->
   <section class="diapo" data-titulo="Conclusión">
     <header class="encabezado">
       <span class="chip invasora">Investigación 4</span>
@@ -265,9 +317,11 @@
     <div class="cadena">
       <span>↓ éxito reproductivo</span><span class="sep">+</span><span>↓ supervivencia</span><span class="sep">=</span><strong>caída poblacional</strong>
     </div>
+    <p class="disparador">Excepción: la <strong>ligustrina</strong> no mata aves, pero puede cambiar <em>la migración misma</em>.</p>
     <aside class="notas">
       <p>En conjunto, estos tres casos muestran que las especies invasoras no detienen la migración en sí, pero sí reducen el éxito reproductivo y la supervivencia en los extremos de la ruta (colonias de cría, sitios de descanso o invernada), lo que puede traducirse en una caída poblacional de la especie migratoria afectada.</p>
       <p>El caso de Georgias del Sur lo confirma "al revés": al sacar a las ratas, las aves se recuperaron rápido.</p>
+      <p>La ligustrina es la excepción: no depreda ni compite, sino que ofrece alimento invernal y así puede volver residentes a zorzales que antes migraban, mientras reemplaza el bosque nativo.</p>
     </aside>
   </section>
 
@@ -282,10 +336,14 @@
         <li>MAyDS y Aves Argentinas (2015) <em>Categorización de las Aves de la Argentina según su estado de conservación</em>.</li>
         <li>de la Peña MR (2025) <em>Aves Argentinas: Descripción, Comportamiento, Reproducción y Distribución</em>.</li>
         <li>Narosky T y Yzurieta D (1987) <em>Guía para la Identificación de las Aves de Argentina y Uruguay</em>. AOP.</li>
+        <li>Hoyos LE, Gavier-Pizarro GI, Kuemmerle T, Bucher EH, Radeloff VC y Tecco PA (2010) Invasion of glossy privet (<em>Ligustrum lucidum</em>) and native forest loss in the Sierras Chicas of Córdoba, Argentina. <em>Biological Invasions</em> 12: 3261–3275.</li>
+        <li>Bellis LM, Astudillo A, Gavier-Pizarro G, Dardanelli S, Landi MA y Hoyos LE (2021) Glossy privet (<em>Ligustrum lucidum</em>) invasion decreases Chaco Serrano forest bird diversity but favors its seed dispersers. <em>Biological Invasions</em> 23: 723–739.</li>
+        <li>Devoto M y Kamlofsky P (2025) Germinación de semillas de especies dispersadas por aves en una reserva natural urbana. <em>Agronomía &amp; Ambiente</em> (FAUBA). Difusión: <a href="https://sobrelatierra.agro.uba.ar/el-zorzal-colorado-dispersor-de-plantas-nativas-y-sin-querer-de-invasoras/" target="_blank" rel="noopener">Sobre La Tierra</a>.</li>
       </ul>
       <details class="creditos">
-        <summary>Créditos de fotos, sonidos y mapas</summary>
+        <summary>Créditos de multimedia y herramientas</summary>
         <p>Mapas: relieve, límites y nombres © Esri (fuente: US National Park Service). Biomas y rutas dibujados en forma esquemática por el grupo. Fotos: Wikimedia Commons.</p>
+        <p>IA generativa: Claude code - modelo sonnet 5.5 en diseño y codificación de presentación </p>
         <ul id="lista-creditos"></ul>
         <p>Sonidos: <a href="https://xeno-canto.org" target="_blank" rel="noopener">xeno-canto.org</a>.</p>
         <ul id="lista-cantos"></ul>
@@ -299,7 +357,7 @@
 <!-- Controles -->
 <nav class="controles" aria-label="Navegación de diapositivas">
   <button id="btn-anterior" aria-label="Anterior">←</button>
-  <span id="contador">1 / 11</span>
+  <span id="contador">1 / 12</span>
   <button id="btn-siguiente" aria-label="Siguiente">→</button>
   <button id="btn-notas" aria-label="Mostrar notas" title="Notas (N)">✎</button>
   <button id="btn-pantalla" aria-label="Pantalla completa" title="Pantalla completa (F)">⛶</button>
